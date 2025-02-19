@@ -16,7 +16,7 @@ func main() {
 
 	// ---- DB connection ---- //
 
-	dbServerURL := fmt.Sprintf("postgres://postgres:%s@%s:%d/%s?sslmode=disable", Password, Host, Port, User)
+	dbServerURL := fmt.Sprintf("postgres://postgres:%s@%s:%d/%s?sslmode=disable", config.Password, config.Host, config.Port, config.User)
 
 	dbPool, err := pgxpool.New(context.Background(), dbServerURL)
 	if err != nil {

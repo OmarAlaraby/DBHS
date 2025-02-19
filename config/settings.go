@@ -1,4 +1,4 @@
-package main
+package config
 
 var Host = "localhost"
 var Port = 5432
